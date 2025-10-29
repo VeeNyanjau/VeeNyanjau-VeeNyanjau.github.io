@@ -22,11 +22,11 @@ Higher National Diploma in Informatics Communication and Technology
 ### Certifications & Licenses
 
 **Cisco**
-- Network Technician Career Path  
+- [Network Technician Career Path](https://www.credly.com/badges/98ccb875-28fc-4f36-95af-cf4889ec27a1)  
   *Issued: July 2024*
 
 **Cisco Networking Academy**
-- CyberOps Associate  
+- [CyberOps Associate](https://www.credly.com/badges/22bdd7f2-4a5a-4903-a57a-5d528c3e25c2)  
   *Issued: January 2023 | Expires: December 2034*
 - Introduction to Cyber Security  
   *2022*
