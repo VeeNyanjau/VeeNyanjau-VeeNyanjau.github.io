@@ -1,0 +1,44 @@
+---
+---
+
+@import "minimal-mistakes/skins/air";
+@import "minimal-mistakes";
+
+/* Custom background and surface colors */
+body {
+  background-color: #f7f9fc;
+}
+
+.masthead,
+.site-footer {
+  background-color: #eef2f7;
+}
+
+/* Main content card */
+.page {
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+
+.page__inner-wrap {
+  background-color: transparent;
+}
+
+/* Archive and list items (if any appear later) */
+.archive__item,
+.taxonomy__section {
+  background-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+/* Notices to better match the palette */
+.notice,
+.notice--primary,
+.notice--info,
+.notice--success {
+  border-radius: 8px;
+}
+
+
