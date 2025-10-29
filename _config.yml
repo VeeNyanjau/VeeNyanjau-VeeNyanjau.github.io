@@ -39,14 +39,16 @@ include:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - _posts/
+  - _posts_backup/
 
 # Plugins (previously gems:)
 plugins:
@@ -79,17 +81,6 @@ footer:
       url: "https://github.com/VeeNyanjau"
 
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
   # _pages
   - scope:
       path: "_pages"
@@ -97,6 +88,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      related: false
 
 category_archive:
   type: liquid
