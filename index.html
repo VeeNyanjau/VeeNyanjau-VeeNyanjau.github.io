@@ -1,60 +1,850 @@
----
-layout: single
-permalink: /
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Victoria Muiruri - IT Professional specializing in Cybersecurity, Digital Infrastructure, and Secure Systems">
+    <title>Victoria Muiruri | Cybersecurity Professional</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6B46C1;
+            --secondary: #9F7AEA;
+            --accent: #E9D5FF;
+            --dark: #1A202C;
+            --charcoal: #2D3748;
+            --light: #F7FAFC;
+            --white: #FFFFFF;
+            --text-dark: #2D3748;
+            --text-light: #718096;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-author_profile: true
-related: false
----
+        [data-theme="dark"] {
+            --primary: #9F7AEA;
+            --secondary: #B794F4;
+            --accent: #553C9A;
+            --light: #1A202C;
+            --white: #2D3748;
+            --text-dark: #F7FAFC;
+            --text-light: #CBD5E0;
+            --charcoal: #4A5568;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--light);
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+
+        /* Scroll Progress Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero .tagline {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .social-links a:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--white);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        /* About Section */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 5rem;
+            box-shadow: 0 20px 60px rgba(107, 70, 193, 0.3);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(107, 70, 193, 0.2);
+        }
+
+        .skill-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 20px;
+            margin: 0.25rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--accent);
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: calc(50% - 2rem);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .timeline-content h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(107, 70, 193, 0.2);
+        }
+
+        .project-thumbnail {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-tag {
+            padding: 0.25rem 0.75rem;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .project-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .project-links a:hover {
+            color: var(--secondary);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+            background: var(--light);
+            color: var(--text-dark);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(107, 70, 193, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-image {
+                margin: 0 auto;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-content {
+                width: calc(100% - 3rem);
+                margin-left: 3rem !important;
+            }
+
+            .timeline-icon {
+                left: 0;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
 <body>
-<background color="lightblue"></background>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
 
-<div style="margin-left: 1.25rem; background-color: #800020; color: #ffffff; padding: 1rem; border-radius: 6px;">
-  <h1><b>Summary</b></h1>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">VM</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
 
-  I’m an IT professional with a growing focus on cybersecurity, digital infrastructure, and secure systems. Currently
-  pursuing a degree in Information Security and Forensics, I combine hands‑on technical skills with an analytical
-  approach to deliver practical, well‑organized solutions. With a background in ICT and certification in Google’s
-  Cybersecurity program, I approach challenges with structure, efficiency, and a keen eye for detail.
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Victoria Muiruri</h1>
+            <p class="tagline">Cybersecurity • Digital Infrastructure • Secure Systems</p>
+            <p>IT Professional specializing in securing digital landscapes with precision and innovation</p>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/victoria-muiruri-cyberspace" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/VeeNyanjau" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:your.email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <a href="#contact" class="cta-btn">Get In Touch</a>
+        </div>
+    </section>
 
-  <h1><b>Education</b></h1>
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
+        <div class="about-container">
+            <div class="profile-image" data-aos="fade-right">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="about-text" data-aos="fade-left">
+                <p>I'm an IT professional with a growing focus on cybersecurity, digital infrastructure, and secure systems. Currently pursuing a degree in Information Security and Forensics, I combine hands-on technical skills with an analytical approach to deliver practical, well-organized solutions.</p>
+                <p>With a background in ICT and certification in Google's Cybersecurity program, I approach challenges with structure, efficiency, and a keen eye for detail. My passion lies in protecting digital infrastructure and sharing knowledge in the cyberspace domain.</p>
+            </div>
+        </div>
+    </section>
 
-  <b>KCA University — Bachelor’s in Information Security and Forensics  
-  2024 – 2027</b> (In Progress) <br><br>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                <h3><i class="fas fa-shield-alt"></i> Cybersecurity</h3>
+                <div>
+                    <span class="skill-badge">Network Security</span>
+                    <span class="skill-badge">Threat Analysis</span>
+                    <span class="skill-badge">Security Compliance</span>
+                    <span class="skill-badge">CyberOps</span>
+                </div>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                <h3><i class="fas fa-network-wired"></i> Networking</h3>
+                <div>
+                    <span class="skill-badge">Network Administration</span>
+                    <span class="skill-badge">Infrastructure Design</span>
+                    <span class="skill-badge">Cisco Technologies</span>
+                </div>
+            </div>
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                <h3><i class="fas fa-code"></i> Technical Skills</h3>
+                <div>
+                    <span class="skill-badge">Information Security</span>
+                    <span class="skill-badge">Digital Forensics</span>
+                    <span class="skill-badge">System Administration</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <b>Kabete National Polytechnic— Higher National Diploma in Informatics Communication and Technology  
-  2018 – 2021</b><br><br>
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title" data-aos="fade-up">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item" data-aos="fade-up">
+                <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="timeline-content">
+                    <h3>Bachelor's in Information Security and Forensics</h3>
+                    <p class="timeline-date">KCA University | 2024 - 2027</p>
+                    <p>Currently pursuing advanced studies in information security and digital forensics, focusing on modern cybersecurity challenges and solutions.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="timeline-content">
+                    <h3>Higher National Diploma in Informatics Communication and Technology</h3>
+                    <p class="timeline-date">Kabete National Polytechnic | 2018 - 2021</p>
+                    <p>Completed comprehensive ICT program covering networking, systems administration, and IT fundamentals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <h1><b>Certifications</b></h1>
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <h2 class="section-title" data-aos="fade-up">Certifications & Licenses</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-thumbnail"><i class="fab fa-cisco"></i></div>
+                <div class="project-content">
+                    <h3>Network Technician Career Path</h3>
+                    <p><strong>Cisco</strong> | Issued: July 2024</p>
+                    <div class="project-links">
+                        <a href="https://www.credly.com/badges/98ccb875-28fc-4f36-95af-cf4889ec27a1" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-thumbnail"><i class="fab fa-cisco"></i></div>
+                <div class="project-content">
+                    <h3>CyberOps Associate</h3>
+                    <p><strong>Cisco Networking Academy</strong> | Jan 2023 - Dec 2034</p>
+                    <div class="project-links">
+                        <a href="https://www.credly.com/badges/22bdd7f2-4a5a-4903-a57a-5d528c3e25c2" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-thumbnail"><i class="fab fa-google"></i></div>
+                <div class="project-content">
+                    <h3>Cybersecurity Program</h3>
+                    <p><strong>Google</strong></p>
+                    <p>Comprehensive cybersecurity certification covering essential security concepts and practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <b>Network Technician Career Path : Cisco </b><br>
-  Issued: July 2024  <br>
-  Credly: <a href="https://www.credly.com/badges/98ccb875-28fc-4f36-95af-cf4889ec27a1" target="_blank" rel="noopener" aria-label="View Network Technician badge on Credly" style="color:#fff;">
-    <i class="fas fa-external-link-alt" style="font-size:1rem;"></i>
-  </a>
-  <br><br>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+        <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-  <b>CyberOps Associate : Cisco Networking Academy </b> <br>
-  Issued: January 2023 · Expires: December 2034  <br>
-  Credly: <a href="https://www.credly.com/badges/22bdd7f2-4a5a-4903-a57a-5d528c3e25c2" target="_blank" rel="noopener" aria-label="View CyberOps Associate badge on Credly" style="color:#fff;">
-    <i class="fas fa-external-link-alt" style="font-size:1rem;"></i>
-  </a>
-  <br><br>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Victoria Muiruri. Built with ❤️</p>
+    </footer>
 
-  <b>Introduction to Cyber Security : Cisco Networking Academy </b> <br>
-  2022 <br><br>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
 
-  <b>CyberOps Associate Cyber Security : Cisco Networking Academy </b> <br>
-  2022 – 2023 <br><br>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-  <b>Cybersecurity Program : Google</b>
-  <div style="margin-top: 0.75rem;">
-    <a href="https://www.linkedin.com/in/victoria-muiruri-cyberspace" target="_blank" rel="noopener" aria-label="LinkedIn" style="margin-right:10px; color:#0e76a8;">
-      <i class="fab fa-linkedin" style="font-size:1.15rem;"></i>
-    </a>
-    <a href="https://github.com/VeeNyanjau" target="_blank" rel="noopener" aria-label="GitHub" style="margin-right:10px; color:#ffffff;">
-      <i class="fab fa-github" style="font-size:1.15rem;"></i>
-    </a>
-  </div>
-</div>
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scroll-progress').style.width = scrolled + '%';
+        });
 
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Active Navigation Highlighting
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').slice(1) === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Dark/Light Mode Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to 'light'
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+        updateThemeIcon(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            const icon = themeToggle.querySelector('i');
+            icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        }
+
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            e.target.reset();
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
+</html>
