@@ -526,6 +526,32 @@
             box-shadow: 0 10px 30px rgba(107, 70, 193, 0.3);
         }
 
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .form-status {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .form-status.success {
+            background: #D4EDDA;
+            color: #155724;
+            border: 1px solid #C3E6CB;
+        }
+
+        .form-status.error {
+            background: #F8D7DA;
+            color: #721C24;
+            border: 1px solid #F5C6CB;
+        }
+
         /* Footer */
         footer {
             background: var(--charcoal);
@@ -727,20 +753,27 @@
     <section id="contact">
         <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
         <div class="contact-container" data-aos="fade-up" data-aos-delay="100">
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xanlgwjq" method="POST">
+                <!-- Success/Error Messages -->
+                <div id="formStatus" class="form-status" style="display: none;"></div>
+                
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="_replyto" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Send Message</button>
+                
+                <!-- Honeypot for spam protection (hidden field) -->
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                
+                <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
             </form>
         </div>
     </section>
@@ -824,11 +857,48 @@
         }
 
         // Contact Form Handler
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formStatus = document.getElementById('formStatus');
+
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            e.target.reset();
-        });
+            
+            // Disable submit button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            formStatus.style.display = 'none';
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Success
+                    formStatus.textContent = '✓ Thank you! Your message has been sent successfully.';
+                    formStatus.className = 'form-status success';
+                    formStatus.style.display = 'block';
+                    contactForm.reset();
+                } else {
+                    // Error from Formspree
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Network or other error
+                formStatus.textContent = '✗ Oops! There was a problem sending your message. Please try again.';
+                formStatus.className = 'form-status error';
+                formStatus.style.display = 'block';
+            } finally {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
+        })
 
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
