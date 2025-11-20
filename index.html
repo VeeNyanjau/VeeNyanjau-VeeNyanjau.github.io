@@ -279,13 +279,14 @@
             position: relative;
             clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            padding: 6px;
+            padding: 0;
             box-shadow: 
                 0 0 20px rgba(107, 70, 193, 0.5),
                 0 0 40px rgba(159, 122, 234, 0.3),
                 inset 0 0 20px rgba(107, 70, 193, 0.2);
             transition: var(--transition);
             animation: techPulse 3s ease-in-out infinite;
+            overflow: hidden;
         }
 
         @keyframes techPulse {
@@ -328,11 +329,11 @@
         .profile-image::after {
             content: '';
             position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-            border: 2px solid var(--primary);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 3px solid var(--primary);
             clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
             z-index: 3;
             opacity: 0.8;
@@ -369,12 +370,15 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center center;
             clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-            position: relative;
+            position: absolute;
+            top: 0;
+            left: 0;
             z-index: 1;
             transition: var(--transition);
             filter: contrast(1.1) brightness(0.95) saturate(1.2);
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: block;
         }
 
         .profile-image:hover {
