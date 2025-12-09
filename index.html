@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Victoria Muiruri - IT Professional specializing in Cybersecurity, Digital Infrastructure, and Secure Systems">
+    <meta name="description"
+        content="Victoria Muiruri - IT Professional specializing in Cybersecurity, Digital Infrastructure, and Secure Systems">
     <title>Victoria Muiruri | Cybersecurity Professional</title>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <style>
         :root {
             --primary: #6B46C1;
@@ -76,7 +80,7 @@
             top: 0;
             width: 100%;
             background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 999;
             transition: var(--transition);
         }
@@ -174,14 +178,19 @@
             position: absolute;
             width: 300%;
             height: 300%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
             background-size: 50px 50px;
             animation: float 20s linear infinite;
         }
 
         @keyframes float {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(50px, 50px);
+            }
         }
 
         .hero-content {
@@ -214,7 +223,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -240,12 +249,12 @@
             font-weight: 600;
             margin-top: 1rem;
             transition: var(--transition);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .cta-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
 
         /* Section Styles */
@@ -280,7 +289,7 @@
             clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             padding: 0;
-            box-shadow: 
+            box-shadow:
                 0 0 20px rgba(107, 70, 193, 0.5),
                 0 0 40px rgba(159, 122, 234, 0.3),
                 inset 0 0 20px rgba(107, 70, 193, 0.2);
@@ -290,14 +299,17 @@
         }
 
         @keyframes techPulse {
-            0%, 100% { 
-                box-shadow: 
+
+            0%,
+            100% {
+                box-shadow:
                     0 0 20px rgba(107, 70, 193, 0.5),
                     0 0 40px rgba(159, 122, 234, 0.3),
                     inset 0 0 20px rgba(107, 70, 193, 0.2);
             }
-            50% { 
-                box-shadow: 
+
+            50% {
+                box-shadow:
                     0 0 30px rgba(107, 70, 193, 0.8),
                     0 0 60px rgba(159, 122, 234, 0.5),
                     inset 0 0 30px rgba(107, 70, 193, 0.4);
@@ -311,7 +323,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
+            background:
                 linear-gradient(0deg, transparent 24%, rgba(107, 70, 193, 0.1) 25%, rgba(107, 70, 193, 0.1) 26%, transparent 27%, transparent 74%, rgba(107, 70, 193, 0.1) 75%, rgba(107, 70, 193, 0.1) 76%, transparent 77%, transparent),
                 linear-gradient(90deg, transparent 24%, rgba(107, 70, 193, 0.1) 25%, rgba(107, 70, 193, 0.1) 26%, transparent 27%, transparent 74%, rgba(107, 70, 193, 0.1) 75%, rgba(107, 70, 193, 0.1) 76%, transparent 77%, transparent);
             background-size: 20px 20px;
@@ -322,8 +334,13 @@
         }
 
         @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(20px, 20px); }
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(20px, 20px);
+            }
         }
 
         .profile-image::after {
@@ -337,7 +354,7 @@
             clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
             z-index: 3;
             opacity: 0.8;
-            box-shadow: 
+            box-shadow:
                 0 0 10px var(--primary),
                 inset 0 0 10px var(--primary);
             animation: borderScan 2s linear infinite;
@@ -345,22 +362,24 @@
         }
 
         @keyframes borderScan {
-            0% { 
+            0% {
                 opacity: 0.3;
-                box-shadow: 
+                box-shadow:
                     0 0 5px var(--primary),
                     inset 0 0 5px var(--primary);
             }
-            50% { 
+
+            50% {
                 opacity: 1;
-                box-shadow: 
+                box-shadow:
                     0 0 20px var(--primary),
                     0 0 30px var(--secondary),
                     inset 0 0 20px var(--primary);
             }
-            100% { 
+
+            100% {
                 opacity: 0.3;
-                box-shadow: 
+                box-shadow:
                     0 0 5px var(--primary),
                     inset 0 0 5px var(--primary);
             }
@@ -387,10 +406,23 @@
         }
 
         @keyframes techGlitch {
-            0%, 100% { transform: translateY(-10px) scale(1.05) rotate(2deg); }
-            25% { transform: translateY(-10px) scale(1.05) rotate(-2deg) translateX(2px); }
-            50% { transform: translateY(-10px) scale(1.05) rotate(2deg) translateX(-2px); }
-            75% { transform: translateY(-10px) scale(1.05) rotate(-1deg); }
+
+            0%,
+            100% {
+                transform: translateY(-10px) scale(1.05) rotate(2deg);
+            }
+
+            25% {
+                transform: translateY(-10px) scale(1.05) rotate(-2deg) translateX(2px);
+            }
+
+            50% {
+                transform: translateY(-10px) scale(1.05) rotate(2deg) translateX(-2px);
+            }
+
+            75% {
+                transform: translateY(-10px) scale(1.05) rotate(-1deg);
+            }
         }
 
         .profile-image:hover img {
@@ -399,11 +431,12 @@
         }
 
         @keyframes scanline {
-            0% { 
+            0% {
                 background: linear-gradient(transparent 50%, rgba(107, 70, 193, 0.1) 50%);
                 background-size: 100% 4px;
             }
-            100% { 
+
+            100% {
                 background: linear-gradient(transparent 50%, rgba(107, 70, 193, 0.1) 50%);
                 background-size: 100% 4px;
                 background-position: 0 100%;
@@ -412,7 +445,7 @@
 
         .profile-image:hover::after {
             opacity: 1;
-            box-shadow: 
+            box-shadow:
                 0 0 30px var(--primary),
                 0 0 50px var(--secondary),
                 inset 0 0 30px var(--primary);
@@ -435,7 +468,7 @@
             background: var(--white);
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
         }
 
@@ -489,7 +522,7 @@
             background: var(--white);
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             width: calc(50% - 2rem);
             position: relative;
         }
@@ -537,7 +570,7 @@
             background: var(--white);
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
         }
 
@@ -609,7 +642,7 @@
             background: var(--white);
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .form-group {
@@ -703,7 +736,7 @@
                 background: var(--white);
                 flex-direction: column;
                 padding: 1rem;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             }
 
             .nav-links.active {
@@ -739,6 +772,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Scroll Progress Bar -->
     <div id="scroll-progress"></div>
@@ -754,7 +788,8 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button></li>
+                <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i
+                            class="fas fa-moon"></i></button></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
         </div>
@@ -766,13 +801,16 @@
             <h1>Victoria Muiruri</h1>
             <p class="tagline">Cybersecurity • Digital Infrastructure • Secure Systems</p>
             <p>IT Professional specializing in securing digital landscapes with precision and innovation</p>
-            
+
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/victoria-muiruri-cyberspace" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/VeeNyanjau" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vickyrahab5@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/victoria-muiruri-cyberspace" target="_blank" rel="noopener"
+                    aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/VeeNyanjau" target="_blank" rel="noopener" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vickyrahab5@gmail.com" target="_blank"
+                    rel="noopener" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
-            
+
             <a href="#contact" class="cta-btn">Get In Touch</a>
         </div>
     </section>
@@ -785,8 +823,12 @@
                 <img src="assets/images/avatar.jpg" alt="Victoria Muiruri - Cybersecurity Professional">
             </div>
             <div class="about-text" data-aos="fade-left">
-                <p>I'm an IT professional with a growing focus on cybersecurity, digital infrastructure, and secure systems. Currently pursuing a degree in Information Security and Forensics, I combine hands-on technical skills with an analytical approach to deliver practical, well-organized solutions.</p>
-                <p>With a background in ICT and certification in Google's Cybersecurity program, I approach challenges with structure, efficiency, and a keen eye for detail. My passion lies in protecting digital infrastructure and sharing knowledge in the cyberspace domain.</p>
+                <p>I'm an IT professional with a growing focus on cybersecurity, digital infrastructure, and secure
+                    systems. Currently pursuing a degree in Information Security and Forensics, I combine hands-on
+                    technical skills with an analytical approach to deliver practical, well-organized solutions.</p>
+                <p>With a background in ICT and certification in Google's Cybersecurity program, I approach challenges
+                    with structure, efficiency, and a keen eye for detail. My passion lies in protecting digital
+                    infrastructure and sharing knowledge in the cyberspace domain.</p>
             </div>
         </div>
     </section>
@@ -832,7 +874,8 @@
                 <div class="timeline-content">
                     <h3>Bachelor's in Information Security and Forensics</h3>
                     <p class="timeline-date">KCA University | 2024 - 2026</p>
-                    <p>Currently pursuing advanced studies in information security and digital forensics, focusing on modern cybersecurity challenges and solutions.</p>
+                    <p>Currently pursuing advanced studies in information security and digital forensics, focusing on
+                        modern cybersecurity challenges and solutions.</p>
                 </div>
             </div>
             <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
@@ -840,7 +883,8 @@
                 <div class="timeline-content">
                     <h3>Higher National Diploma in Informatics Communication and Technology</h3>
                     <p class="timeline-date">Kabete National Polytechnic | 2018 - 2021</p>
-                    <p>Completed comprehensive ICT program covering networking, systems administration, and IT fundamentals.</p>
+                    <p>Completed comprehensive ICT program covering networking, systems administration, and IT
+                        fundamentals.</p>
                 </div>
             </div>
         </div>
@@ -856,7 +900,8 @@
                     <h3>Network Technician Career Path</h3>
                     <p><strong>Cisco</strong> | Issued: July 2024</p>
                     <div class="project-links">
-                        <a href="https://www.credly.com/badges/98ccb875-28fc-4f36-95af-cf4889ec27a1" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
+                        <a href="https://www.credly.com/badges/98ccb875-28fc-4f36-95af-cf4889ec27a1" target="_blank"
+                            rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
                     </div>
                 </div>
             </div>
@@ -866,7 +911,8 @@
                     <h3>CyberOps Associate</h3>
                     <p><strong>Cisco Networking Academy</strong> | Jan 2023 - Dec 2034</p>
                     <div class="project-links">
-                        <a href="https://www.credly.com/badges/22bdd7f2-4a5a-4903-a57a-5d528c3e25c2" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
+                        <a href="https://www.credly.com/badges/22bdd7f2-4a5a-4903-a57a-5d528c3e25c2" target="_blank"
+                            rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
                     </div>
                 </div>
             </div>
@@ -884,7 +930,19 @@
                     <h3>Ethical Hacker</h3>
                     <p><strong>Cisco</strong> | Issued: 2024</p>
                     <div class="project-links">
-                        <a href="https://www.credly.com/badges/c607695c-533e-426f-b391-d57f0e40a12b/linked_in_profile" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
+                        <a href="https://www.credly.com/badges/c607695c-533e-426f-b391-d57f0e40a12b/linked_in_profile"
+                            target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="project-thumbnail"><i class="fab fa-cisco"></i></div>
+                <div class="project-content">
+                    <h3>Cyber Threat Management</h3>
+                    <p><strong>Cisco</strong> | Issued: 2024</p>
+                    <div class="project-links">
+                        <a href="https://www.credly.com/badges/b6183fd0-a0ec-411d-adf4-661a5a745480/linked_in_profile"
+                            target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
                     </div>
                 </div>
             </div>
@@ -898,7 +956,7 @@
             <form class="contact-form" id="contactForm" action="https://formspree.io/f/xanlgwjq" method="POST">
                 <!-- Success/Error Messages -->
                 <div id="formStatus" class="form-status" style="display: none;"></div>
-                
+
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -911,10 +969,10 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
-                
+
                 <!-- Honeypot for spam protection (hidden field) -->
                 <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-                
+
                 <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
             </form>
         </div>
@@ -927,7 +985,7 @@
 
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <script>
         // Initialize AOS
         AOS.init({
@@ -1005,12 +1063,12 @@
 
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             // Disable submit button and show loading state
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending...';
             formStatus.style.display = 'none';
-            
+
             try {
                 const response = await fetch(contactForm.action, {
                     method: 'POST',
@@ -1019,7 +1077,7 @@
                         'Accept': 'application/json'
                     }
                 });
-                
+
                 if (response.ok) {
                     // Success
                     formStatus.textContent = '✓ Thank you! Your message has been sent successfully.';
@@ -1059,4 +1117,5 @@
         });
     </script>
 </body>
+
 </html>
