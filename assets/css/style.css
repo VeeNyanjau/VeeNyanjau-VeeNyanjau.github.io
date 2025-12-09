@@ -705,7 +705,7 @@ section {
 
 .skill-tags {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 0.5rem;
 }
 
@@ -829,7 +829,7 @@ section {
 
 .project-tech {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 0.5rem;
     margin: 1rem 0;
 }
