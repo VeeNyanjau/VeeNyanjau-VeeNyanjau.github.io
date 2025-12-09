@@ -1,25 +1,25 @@
 :root {
-    --primary: #6B46C1;
-    --secondary: #9F7AEA;
-    --accent: #E9D5FF;
-    --dark: #1A202C;
-    --charcoal: #2D3748;
-    --light: #F7FAFC;
+    --primary: #0EA5E9;
+    --secondary: #6366f1;
+    --accent: #BAE6FD;
+    --dark: #0F172A;
+    --charcoal: #1E293B;
+    --light: #F8FAFC;
     --white: #FFFFFF;
-    --text-dark: #2D3748;
-    --text-light: #718096;
+    --text-dark: #0F172A;
+    --text-light: #475569;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-theme="dark"] {
-    --primary: #9F7AEA;
-    --secondary: #B794F4;
-    --accent: #553C9A;
-    --light: #1A202C;
-    --white: #2D3748;
-    --text-dark: #F7FAFC;
-    --text-light: #CBD5E0;
-    --charcoal: #4A5568;
+    --primary: #38BDF8;
+    --secondary: #818CF8;
+    --accent: #0369A1;
+    --light: #0F172A;
+    --white: #1E293B;
+    --text-dark: #F8FAFC;
+    --text-light: #94A3B8;
+    --charcoal: #334155;
 }
 
 * {
@@ -475,6 +475,17 @@ section {
     text-align: center;
     margin-bottom: 3rem;
     color: var(--primary);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
 }
 
 /* About Section */
@@ -669,11 +680,13 @@ section {
 }
 
 .skill-card {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .skill-card:hover {
@@ -723,12 +736,14 @@ section {
 }
 
 .timeline-content {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     width: calc(50% - 2rem);
     position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
@@ -771,11 +786,13 @@ section {
 }
 
 .project-card {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .project-card:hover {
