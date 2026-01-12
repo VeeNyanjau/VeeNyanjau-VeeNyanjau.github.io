@@ -834,6 +834,13 @@ section {
     margin: 1rem 0;
 }
 
+/* Override for skill tags in project cards to be horizontal */
+.project-content .skill-tags {
+    margin: 1rem 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .tech-tag {
     padding: 0.25rem 0.75rem;
     background: var(--accent);
