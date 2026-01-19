@@ -33,22 +33,7 @@
     --container-width: 1200px;
 }
 
-[data-theme="light"] {
-    --bg-dark: #f8fafc;
-    --bg-secondary: #e2e8f0;
-    --bg-card: rgba(255, 255, 255, 0.7);
-    --bg-card-hover: rgba(255, 255, 255, 0.9);
-    --primary: #0284c7;
-    --primary-glow: rgba(2, 132, 199, 0.3);
-    --secondary: #7c3aed;
-    --secondary-glow: rgba(124, 58, 237, 0.3);
-    --accent: #0ea5e9;
-    --text-main: #0f172a;
-    --text-muted: #475569;
-    --text-highlight: #1e293b;
-    --border: rgba(148, 163, 184, 0.2);
-    --border-hover: rgba(2, 132, 199, 0.4);
-}
+/* Light Mode Removed by User Request */
 
 * {
     margin: 0;
