@@ -3,9 +3,9 @@
     --bg-dark: #0b1120;
     /* Deeper darker blue/slate */
     --bg-secondary: #1e293b;
-    --bg-card: rgba(30, 41, 59, 0.4);
-    /* More transparent for glassmorphism */
-    --bg-card-hover: rgba(30, 41, 59, 0.7);
+    --bg-card: rgba(15, 23, 42, 0.75);
+    /* Darker and more opaque for better text contrast */
+    --bg-card-hover: rgba(30, 41, 59, 0.9);
 
     --primary: #38bdf8;
     /* Sky Blue */
@@ -16,12 +16,15 @@
     --accent: #22d3ee;
     /* Cyan */
 
-    --text-main: #f1f5f9;
-    --text-muted: #94a3b8;
-    --text-highlight: #e2e8f0;
+    --text-main: #ffffff;
+    /* Pure white for max contrast */
+    --text-muted: #cbd5e1;
+    /* Lighter gray (Slate 300) for better readability */
+    --text-highlight: #f8fafc;
+    /* Slate 50 */
 
-    --border: rgba(148, 163, 184, 0.1);
-    --border-hover: rgba(56, 189, 248, 0.4);
+    --border: rgba(148, 163, 184, 0.2);
+    --border-hover: rgba(56, 189, 248, 0.5);
 
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --font-heading: 'Poppins', sans-serif;
@@ -254,12 +257,13 @@ nav.scrolled {
 }
 
 .hero h1 {
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 800;
     margin-bottom: 1rem;
     letter-spacing: -2px;
     line-height: 1.1;
-    color: var(--text-main);
+    color: var(--text-highlight);
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
 }
 
 .hero .tagline {
@@ -974,7 +978,11 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
     }
 
     .about-container {
