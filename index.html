@@ -87,46 +87,94 @@
     <!-- Skills Section -->
     <section id="skills">
         <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
-        <div class="skills-grid">
+        <div class="skills-container">
             <!-- Offensive Security -->
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
                 <h3><i class="fas fa-bug"></i> Offensive Security</h3>
-                <div class="skill-tags">
-                    <span class="skill-badge">Ethical Hacking</span>
-                    <span class="skill-badge">Penetration Testing</span>
-                    <span class="skill-badge">Vulnerability Assessment</span>
-                    <span class="skill-badge">Exploiting Networks</span>
-                    <span class="skill-badge">Exploiting Applications</span>
-                    <span class="skill-badge">Pentesting Tools</span>
-                    <span class="skill-badge">Social Engineering</span>
-                    <span class="skill-badge">IoT Security</span>
+
+                <div class="skill-bar-wrapper">
+                    <div class="skill-info">
+                        <span class="skill-name">Penetration Testing</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-progress-bg">
+                        <div class="skill-progress-fill" style="width: 0" data-width="90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar-wrapper">
+                    <div class="skill-info">
+                        <span class="skill-name">Ethical Hacking</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-progress-bg">
+                        <div class="skill-progress-fill" style="width: 0" data-width="95%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-tags-container">
+                    <span class="skill-tag">Vulnerability Assessment</span>
+                    <span class="skill-tag">Exploiting Networks</span>
+                    <span class="skill-tag">Burp Suite</span>
+                    <span class="skill-tag">Metasploit</span>
+                    <span class="skill-tag">Social Engineering</span>
+                    <span class="skill-tag">IoT Security</span>
                 </div>
             </div>
 
             <!-- Cybersecurity Operations -->
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
                 <h3><i class="fas fa-shield-alt"></i> Cyber Operations</h3>
-                <div class="skill-tags">
-                    <span class="skill-badge">Incident Response</span>
-                    <span class="skill-badge">Threat Intelligence</span>
-                    <span class="skill-badge">Cyber Kill Chain</span>
-                    <span class="skill-badge">Diamond Model</span>
-                    <span class="skill-badge">Evidence Handling</span>
-                    <span class="skill-badge">Attack Attribution</span>
-                    <span class="skill-badge">Network Profiling</span>
+
+                <div class="skill-bar-wrapper">
+                    <div class="skill-info">
+                        <span class="skill-name">Incident Response</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-progress-bg">
+                        <div class="skill-progress-fill" style="width: 0" data-width="85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar-wrapper">
+                    <div class="skill-info">
+                        <span class="skill-name">Threat Intelligence</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-progress-bg">
+                        <div class="skill-progress-fill" style="width: 0" data-width="80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-tags-container">
+                    <span class="skill-tag">Cyber Kill Chain</span>
+                    <span class="skill-tag">Diamond Model</span>
+                    <span class="skill-tag">Evidence Handling</span>
+                    <span class="skill-tag">Network Profiling</span>
+                    <span class="skill-tag">SIEM Tools</span>
                 </div>
             </div>
 
             <!-- GRC -->
-            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
                 <h3><i class="fas fa-file-contract"></i> GRC & Strategy</h3>
-                <div class="skill-tags">
-                    <span class="skill-badge">Risk Management</span>
-                    <span class="skill-badge">Risk Assessment</span>
-                    <span class="skill-badge">Security Controls</span>
-                    <span class="skill-badge">Disaster Recovery</span>
-                    <span class="skill-badge">Secure Device Management</span>
-                    <span class="skill-badge">Security Assessments</span>
+
+                <div class="skill-bar-wrapper">
+                    <div class="skill-info">
+                        <span class="skill-name">Risk Management</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-progress-bg">
+                        <div class="skill-progress-fill" style="width: 0" data-width="90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-tags-container">
+                    <span class="skill-tag">Security Controls</span>
+                    <span class="skill-tag">Disaster Recovery</span>
+                    <span class="skill-tag">Compliance Standards</span>
+                    <span class="skill-tag">Security Assessments</span>
+                    <span class="skill-tag">Policy Development</span>
                 </div>
             </div>
         </div>
@@ -144,15 +192,17 @@
                     <img src="assets/images/cybersecbrief_thumb.png" alt="CyberSecurity Breaking News Dashboard">
                 </div>
                 <div class="project-content">
-                    <h3>CyberSecBrief</h3>
-                    <p>Automated Cybersecurity News Briefing system. Python-based autonomous system that collects,
-                        processes, and emails daily cybersecurity news.</p>
+                    <div class="project-info">
+                        <h3>CyberSecBrief</h3>
+                        <p>Automated Cybersecurity News Briefing system. Python-based autonomous system that collects,
+                            processes, and emails daily cybersecurity news.</p>
+                    </div>
 
-                    <div class="skill-tags project-tech">
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">Automation</span>
-                        <span class="skill-badge">GitHub Actions</span>
-                        <span class="skill-badge">SMTP</span>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Automation</span>
+                        <span class="tech-badge">GitHub Actions</span>
+                        <span class="tech-badge">SMTP</span>
                     </div>
 
                     <div class="project-links">
@@ -161,8 +211,8 @@
                         </a>
                     </div>
                 </div>
-                <!-- Toggle Button Moved Outside Content for Grid Layout -->
-                <button class="toggle-btn" aria-label="Toggle Details"><i class="fas fa-chevron-down"></i></button>
+                <!-- Toggle Icon for New Layout -->
+                <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
             </div>
 
             <!-- Breach_a_Mail -->
@@ -171,17 +221,18 @@
                     <img src="assets/images/breach_a_mail_thumb.png" alt="Breach_a_Mail Cybersecurity Concept Art">
                 </div>
                 <div class="project-content">
-                    <h3>Breach_a_Mail</h3>
-                    <p>A comprehensive cybersecurity tool that checks for data breaches and password strength. Features
-                        a
-                        knowledgeable cybersecurity chatbot and provides real-time updates on the latest published
-                        breaches.</p>
+                    <div class="project-info">
+                        <h3>Breach_a_Mail</h3>
+                        <p>A comprehensive cybersecurity tool that checks for data breaches and password strength.
+                            Features a knowledgeable cybersecurity chatbot and provides real-time updates on latest
+                            breaches.</p>
+                    </div>
 
-                    <div class="skill-tags project-tech">
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">HIBP API</span>
-                        <span class="skill-badge">AI Chatbot</span>
-                        <span class="skill-badge">Password Strength</span>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">HIBP API</span>
+                        <span class="tech-badge">AI Chatbot</span>
+                        <span class="tech-badge">Password Strength</span>
                     </div>
 
                     <div class="project-links">
@@ -190,7 +241,7 @@
                         </a>
                     </div>
                 </div>
-                <button class="toggle-btn" aria-label="Toggle Details"><i class="fas fa-chevron-down"></i></button>
+                <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
             </div>
 
             <!-- findme-demo -->
@@ -199,14 +250,16 @@
                     <img src="assets/images/findme_demo_thumb.png" alt="FindMe Demo GPS Interface Art">
                 </div>
                 <div class="project-content">
-                    <h3>findme-demo</h3>
-                    <p>A personal safety application designed to help users share their location and status in
-                        emergencies. Uses Firebase for real-time synchronization.</p>
+                    <div class="project-info">
+                        <h3>findme-demo</h3>
+                        <p>A personal safety application designed to help users share their location and status in
+                            emergencies. Uses Firebase for real-time synchronization.</p>
+                    </div>
 
-                    <div class="skill-tags project-tech">
-                        <span class="skill-badge">Kotlin</span>
-                        <span class="skill-badge">Firebase</span>
-                        <span class="skill-badge">Android</span>
+                    <div class="project-tech">
+                        <span class="tech-badge">Kotlin</span>
+                        <span class="tech-badge">Firebase</span>
+                        <span class="tech-badge">Android</span>
                     </div>
 
                     <div class="project-links">
@@ -215,7 +268,7 @@
                         </a>
                     </div>
                 </div>
-                <button class="toggle-btn" aria-label="Toggle Details"><i class="fas fa-chevron-down"></i></button>
+                <div class="toggle-icon"><i class="fas fa-chevron-down"></i></div>
             </div>
         </div>
     </section>
@@ -248,59 +301,57 @@
     <!-- Certifications Section -->
     <section id="certifications">
         <h2 class="section-title" data-aos="fade-up">Certifications & Licenses</h2>
-        <div class="projects-grid">
-            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="project-thumbnail"><i class="fab fa-cisco"></i></div>
-                <div class="project-content">
-                    <h3>Network Technician Career Path</h3>
-                    <p><strong>Cisco</strong> | Issued: July 2024</p>
-                    <div class="project-links">
-                        <a href="https://www.credly.com/badges/98ccb875-28fc-4f36-95af-cf4889ec27a1" target="_blank"
-                            rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
-                    </div>
+        <div class="certs-grid" id="certsGrid">
+            <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-icon"><i class="fab fa-cisco"></i></div>
+                <h3>Network Technician Career Path</h3>
+                <p><strong>Cisco</strong> | Issued: July 2024</p>
+                <div class="project-links" style="justify-content: center;">
+                    <a href="https://www.credly.com/badges/98ccb875-28fc-4f36-95af-cf4889ec27a1" target="_blank"
+                        rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
                 </div>
             </div>
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-thumbnail"><i class="fab fa-cisco"></i></div>
-                <div class="project-content">
-                    <h3>CyberOps Associate</h3>
-                    <p><strong>Cisco Networking Academy</strong> | Jan 2023 - Dec 2034</p>
-                    <div class="project-links">
-                        <a href="https://www.credly.com/badges/22bdd7f2-4a5a-4903-a57a-5d528c3e25c2" target="_blank"
-                            rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
-                    </div>
+
+            <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="cert-icon"><i class="fab fa-cisco"></i></div>
+                <h3>CyberOps Associate</h3>
+                <p><strong>Cisco Networking Academy</strong></p>
+                <div class="project-links" style="justify-content: center;">
+                    <a href="https://www.credly.com/badges/22bdd7f2-4a5a-4903-a57a-5d528c3e25c2" target="_blank"
+                        rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
                 </div>
             </div>
-            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="project-thumbnail"><i class="fab fa-google"></i></div>
-                <div class="project-content">
-                    <h3>Cybersecurity Program</h3>
-                    <p><strong>Google</strong></p>
-                    <p>Comprehensive cybersecurity certification covering essential security concepts and practices.</p>
+
+            <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-icon"><i class="fab fa-google"></i></div>
+                <h3>Cybersecurity Program</h3>
+                <p><strong>Google</strong></p>
+            </div>
+
+            <!-- Hidden Certs (Initially) -->
+            <div class="cert-card hidden-cert" style="display: none;" data-aos="fade-up">
+                <div class="cert-icon"><i class="fab fa-cisco"></i></div>
+                <h3>Ethical Hacker</h3>
+                <p><strong>Cisco</strong> | Issued: 2024</p>
+                <div class="project-links" style="justify-content: center;">
+                    <a href="https://www.credly.com/badges/c607695c-533e-426f-b391-d57f0e40a12b/linked_in_profile"
+                        target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
                 </div>
             </div>
-            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="project-thumbnail"><i class="fab fa-cisco"></i></div>
-                <div class="project-content">
-                    <h3>Ethical Hacker</h3>
-                    <p><strong>Cisco</strong> | Issued: 2024</p>
-                    <div class="project-links">
-                        <a href="https://www.credly.com/badges/c607695c-533e-426f-b391-d57f0e40a12b/linked_in_profile"
-                            target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
-                    </div>
+
+            <div class="cert-card hidden-cert" style="display: none;" data-aos="fade-up">
+                <div class="cert-icon"><i class="fab fa-cisco"></i></div>
+                <h3>Cyber Threat Management</h3>
+                <p><strong>Cisco</strong> | Issued: 2024</p>
+                <div class="project-links" style="justify-content: center;">
+                    <a href="https://www.credly.com/badges/b6183fd0-a0ec-411d-adf4-661a5a745480/linked_in_profile"
+                        target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
                 </div>
             </div>
-            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                <div class="project-thumbnail"><i class="fab fa-cisco"></i></div>
-                <div class="project-content">
-                    <h3>Cyber Threat Management</h3>
-                    <p><strong>Cisco</strong> | Issued: 2024</p>
-                    <div class="project-links">
-                        <a href="https://www.credly.com/badges/b6183fd0-a0ec-411d-adf4-661a5a745480/linked_in_profile"
-                            target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View Credential</a>
-                    </div>
-                </div>
-            </div>
+        </div>
+
+        <div class="show-more-container">
+            <button id="showMoreCerts" class="show-more-btn">Show More Certifications</button>
         </div>
     </section>
 
@@ -585,44 +636,93 @@
     </script>
     <script>
         // Project Cards Toggle Logic
-        // Project Cards Accordion Logic
         function toggleProjectCard(clickedCard) {
             const isCollapsed = clickedCard.classList.contains('collapsed');
+            const container = clickedCard.closest('.projects-grid');
 
-            // Collapse ALL cards first
-            document.querySelectorAll('.project-card').forEach(card => {
-                card.classList.remove('expanded');
-                card.classList.add('collapsed');
-            });
+            if (container) {
+                // Collapse others
+                container.querySelectorAll('.project-card').forEach(card => {
+                    card.classList.remove('expanded');
+                    card.classList.add('collapsed');
+                });
+            }
 
-            // If it was originally collapsed, expand it
+            // Toggle clicked
             if (isCollapsed) {
                 clickedCard.classList.remove('collapsed');
                 clickedCard.classList.add('expanded');
+            } else {
+                // Allow expanding to be reversed (collapsing back) if user clicks again
+                // The original logic only had "if collapsed, expand". It didn't have "if expanded, collapse".
+                // Let's add that for better UX.
+                clickedCard.classList.remove('expanded');
+                clickedCard.classList.add('collapsed');
             }
         }
 
-        // Add click listeners to all cards
         document.querySelectorAll('.project-card').forEach(card => {
             card.addEventListener('click', (e) => {
                 // Ignore clicks on links
                 if (e.target.tagName === 'A' || e.target.closest('a')) return;
-
                 toggleProjectCard(card);
             });
         });
 
-        // Ensure toggle buttons also trigger the same logic (if they exist/are visible)
-        // Since the button is inside the card, the card click listener will catch it bubbling up.
-        // We only need to stop propagation if we WANTED separate behavior, but here we want the same behavior.
-        // However, if the user explicitly clicks the button, we don't want double firing if we attached to button too.
-        // But since we are attached to the card, a click on button bubbles to card.
-        // Let's just make sure the button doesn't do anything special other than bubble.
-        document.querySelectorAll('.project-card .toggle-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                // Let it bubble to the card listener
+        // Skill Bar Animation (Intersection Observer)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const skillObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBar = entry.target.querySelector('.skill-progress-fill');
+                    if (progressBar) {
+                        const width = progressBar.getAttribute('data-width');
+                        progressBar.style.width = width;
+                    }
+                    observer.unobserve(entry.target);
+                }
             });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-category').forEach(skillSection => {
+            skillObserver.observe(skillSection);
         });
+
+        // Show More Certifications Logic
+        const showMoreBtn = document.getElementById('showMoreCerts');
+        const hiddenCerts = document.querySelectorAll('.hidden-cert');
+
+        if (showMoreBtn) {
+            showMoreBtn.addEventListener('click', () => {
+                const isShowing = showMoreBtn.classList.contains('showing');
+
+                if (!isShowing) {
+                    // Show all
+                    hiddenCerts.forEach(cert => {
+                        cert.style.display = 'block';
+                        // Trigger AOS animation if needed
+                        // AOS.refresh() might be needed or just let CSS handle it
+                    });
+                    showMoreBtn.textContent = 'Show Less';
+                    showMoreBtn.classList.add('showing');
+                } else {
+                    // Hide
+                    hiddenCerts.forEach(cert => {
+                        cert.style.display = 'none';
+                    });
+                    showMoreBtn.textContent = 'Show More Certifications';
+                    showMoreBtn.classList.remove('showing');
+
+                    // Smooth scroll back to certs section top to avoid being lost
+                    document.getElementById('certifications').scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
     </script>
 </body>
 
