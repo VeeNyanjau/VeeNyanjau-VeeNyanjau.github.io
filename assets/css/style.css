@@ -707,7 +707,8 @@ section {
 
 .skill-tags {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 0.5rem;
 }
 
@@ -802,6 +803,7 @@ section {
     align-items: start;
     padding: 1rem;
     max-height: 2000px;
+    cursor: pointer;
     /* For transition */
 }
 
@@ -882,9 +884,14 @@ section {
 
 /* Keep tags visible but maybe single line in collapsed? */
 .project-card.collapsed .project-tech {
+    display: none;
+}
+
+.project-card .project-tech {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
+    flex-direction: row;
+    margin-top: 0.5rem;
     gap: 0.5rem;
 }
 
