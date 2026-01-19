@@ -9,6 +9,7 @@
     --text-dark: #0F172A;
     --text-light: #475569;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --card-bg: rgba(255, 255, 255, 0.8);
 }
 
 [data-theme="dark"] {
@@ -20,6 +21,7 @@
     --text-dark: #F8FAFC;
     --text-light: #94A3B8;
     --charcoal: #334155;
+    --card-bg: rgba(30, 41, 59, 0.8);
 }
 
 * {
@@ -680,7 +682,7 @@ section {
 }
 
 .skill-card {
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 15px;
@@ -742,7 +744,7 @@ section {
 }
 
 .timeline-content {
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 15px;
@@ -792,13 +794,55 @@ section {
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    /* For toggle button positioning */
+}
+
+/* Expandable Card Styles */
+.project-card.collapsed .project-content p,
+.project-card.collapsed .project-tech,
+.project-card.collapsed .project-links {
+    display: none;
+}
+
+.project-card .toggle-btn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: var(--accent);
+    color: var(--primary);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.project-card .toggle-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.project-card.expanded .toggle-btn {
+    transform: rotate(180deg);
+}
+
+/* Ensure content spacing in collapsed state */
+.project-card.collapsed .project-content {
+    padding-bottom: 3.5rem;
+    /* Space for toggle button */
 }
 
 .project-card:hover {
@@ -884,7 +928,7 @@ section {
 }
 
 .contact-form {
-    background: var(--white);
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
