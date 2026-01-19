@@ -585,38 +585,42 @@
     </script>
     <script>
         // Project Cards Toggle Logic
-        document.querySelectorAll('.project-card .toggle-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                // Prevent event from bubbling if we used the whole card as a click target, 
-                // but here we are specific to the button.
-                e.stopPropagation();
+        // Project Cards Accordion Logic
+        function toggleProjectCard(clickedCard) {
+            const isCollapsed = clickedCard.classList.contains('collapsed');
 
-                const card = btn.closest('.project-card');
-                const isCollapsed = card.classList.contains('collapsed');
+            // Collapse ALL cards first
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.classList.remove('expanded');
+                card.classList.add('collapsed');
+            });
 
-                if (isCollapsed) {
-                    card.classList.remove('collapsed');
-                    card.classList.add('expanded');
-                } else {
-                    card.classList.remove('expanded');
-                    card.classList.add('collapsed');
-                }
+            // If it was originally collapsed, expand it
+            if (isCollapsed) {
+                clickedCard.classList.remove('collapsed');
+                clickedCard.classList.add('expanded');
+            }
+        }
+
+        // Add click listeners to all cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Ignore clicks on links
+                if (e.target.tagName === 'A' || e.target.closest('a')) return;
+
+                toggleProjectCard(card);
             });
         });
 
-        // Optional: Expand on card click (excluding links)
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('click', (e) => {
-                if (e.target.tagName === 'A' || e.target.closest('a')) return;
-
-                // If it's already the toggle button, let that handler deal with it
-                if (e.target.closest('.toggle-btn')) return;
-
-                const isCollapsed = card.classList.contains('collapsed');
-                if (isCollapsed) {
-                    card.classList.remove('collapsed');
-                    card.classList.add('expanded');
-                }
+        // Ensure toggle buttons also trigger the same logic (if they exist/are visible)
+        // Since the button is inside the card, the card click listener will catch it bubbling up.
+        // We only need to stop propagation if we WANTED separate behavior, but here we want the same behavior.
+        // However, if the user explicitly clicks the button, we don't want double firing if we attached to button too.
+        // But since we are attached to the card, a click on button bubbles to card.
+        // Let's just make sure the button doesn't do anything special other than bubble.
+        document.querySelectorAll('.project-card .toggle-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // Let it bubble to the card listener
             });
         });
     </script>
