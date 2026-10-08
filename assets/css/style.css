@@ -741,6 +741,9 @@ section {
     background: rgba(255, 255, 255, 0.05);
     color: var(--text-muted);
     transition: var(--transition);
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 .project-card.expanded .toggle-icon {
