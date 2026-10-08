@@ -8,15 +8,15 @@
         content="Victoria Muiruri - Cybersecurity specialist focused on securing systems and strengthening digital trust">
     <title>Victoria Muiruri | Cybersecurity Professional</title>
     <meta name="theme-color" content="#0d1117">
-    <link rel="canonical" href="https://veenyanjau.github.io/VeeNyanjau-VeeNyanjau.github.io/">
+    <link rel="canonical" href="https://veenyanjau.github.io/">
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
     <!-- Open Graph / social sharing -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Victoria Muiruri | Cybersecurity Professional">
     <meta property="og:description" content="Cybersecurity specialist dedicated to protecting systems and strengthening digital trust">
-    <meta property="og:url" content="https://veenyanjau.github.io/VeeNyanjau-VeeNyanjau.github.io/">
-    <meta property="og:image" content="https://veenyanjau.github.io/VeeNyanjau-VeeNyanjau.github.io/assets/images/victoria-profile.jpg">
+    <meta property="og:url" content="https://veenyanjau.github.io/">
+    <meta property="og:image" content="https://veenyanjau.github.io/assets/images/victoria-profile.jpg">
     <meta name="twitter:card" content="summary">
 
     <!-- Google Fonts -->
@@ -420,6 +420,13 @@
 
     <!-- Footer -->
     <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/victoria-muiruri-cyberspace" target="_blank" rel="noopener"
+                aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/VeeNyanjau" target="_blank" rel="noopener" aria-label="GitHub"><i
+                    class="fab fa-github"></i></a>
+            <a href="mailto:vickyrahab5@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
         <p>&copy; <span id="year"></span> Victoria Muiruri. Built with ❤️</p>
     </footer>
 
@@ -430,11 +437,13 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <script>
-        // Initialize Particles.js
+        // Initialize Particles.js (fewer particles on small screens, skipped for reduced-motion)
+        const prefersReducedMotionParticles = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReducedMotionParticles) {
         particlesJS("particles-js", {
             "particles": {
                 "number": {
-                    "value": 80,
+                    "value": window.innerWidth < 600 ? 30 : 80,
                     "density": {
                         "enable": true,
                         "value_area": 800
@@ -536,14 +545,17 @@
             },
             "retina_detect": true
         });
+        }
     </script>
 
     <script>
-        // Initialize AOS
+        // Initialize AOS (disabled for reduced-motion users)
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         AOS.init({
             duration: 800,
             once: true,
-            offset: 100
+            offset: 100,
+            disable: prefersReducedMotion
         });
 
         // Set current year

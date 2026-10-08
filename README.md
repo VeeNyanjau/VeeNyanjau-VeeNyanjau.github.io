@@ -2,4 +2,4 @@
 
 Cybersecurity portfolio site: projects, skills, education, and certifications.
 
-**Live:** https://veenyanjau.github.io/VeeNyanjau-VeeNyanjau.github.io/
+**Live:** https://veenyanjau.github.io/
