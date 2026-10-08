@@ -913,6 +913,13 @@ section {
     color: var(--primary);
 }
 
+.credly-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
 /* Contact Section */
 .contact-container {
     max-width: 700px;
