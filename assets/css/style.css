@@ -896,6 +896,10 @@ section {
 .show-more-container {
     text-align: center;
     margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .show-more-btn {
@@ -915,9 +919,20 @@ section {
 
 .credly-link {
     display: inline-block;
-    margin-top: 1rem;
-    color: var(--primary);
+    padding: 0.8rem 2rem;
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
     font-weight: 500;
+    transition: var(--transition);
+}
+
+.credly-link:hover {
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 /* Contact Section */
